@@ -1,0 +1,769 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b8e1a2ea81.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Polleria Merys</title>
+</head>
+<body>
+
+<!---------- ANUNCIO ---------->
+
+<div class="anuncio">
+    <div class="anuncio-content"> 
+        <p>Horario de atención: 12:00pm - 10:30pm | Delivery solo disponible cerca del local</p>
+    </div>
+</div>
+
+<!---------------------------->
+
+<!---------- NAVBAR ---------->
+
+<div class="navbar">
+    <div class="nav-logo">
+        <a href="index.html"><img src="media/logo.png" class="logo" alt=""></a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle"><i class="fa-solid fa-bars" style="color: rgb(220, 179, 44);"></i></button>
+    <div class="navbar-links">
+        <a class="nav-link" href="index.html">INICIO</a>
+        <a class="nav-link" href="#menu">MENU</a>
+        <a class="nav-link" href="#promociones">PROMOS</a>
+        <a class="nav-link" href="#contacto">CONTACTO</a>
+        <a class="nav-direction" href="https://maps.app.goo.gl/GekaEy1yxozNBwxU6" target="_blank"><i class="fa-solid fa-location-dot fa-lg" style="color: rgb(220, 179, 44);"></i>Visítanos en Av. Universitaria 2101, San Miguel</a>
+    </div>
+</div>
+
+<!---------------------------->
+
+<!---------- HERO ------------>
+
+<div class="hero"></div>
+
+
+<!---------------------------->
+
+<!---------- SECTION 1 (Promociones) ------------>
+
+<div id="promociones" class="section1">
+    <div class="section1-start">
+        <div class="section-titulo">
+            <h2>Promociones de la semana:</h2>
+        </div>
+        <div class="contador">
+            <div class="tiempo">
+                <span id="dias">00</span>
+                <p>Días</p>
+            </div>
+
+            <div class="tiempo">
+                <span id="horas">00</span>
+                <p>Horas</p>
+            </div>
+
+            <div class="tiempo">
+                <span id="minutos">00</span>
+                <p>Minutos</p>
+            </div>
+
+            <div class="tiempo">
+                <span id="segundos">00</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+    </div>
+    <div class="section1-content">
+        <div class="section1-promo">
+            <div class="promo-text">
+                <h3>Promo 1</h3>
+                <h5>Antojito Brasa</h5>
+                <p>1/4 de Pollo + papas + ensalada</p>
+                <a href="https://wa.me/51999999999?text=Hola,%20quiero%20información%20sobre%20la%20promo%20de%201/4,%20papas%20y%20ensalada" target="_blank" class="boton-ordenar">¡Ordena ya!</a>
+            </div>
+            <div class="promo-image">
+                <img src="media/cuarto.jpg" alt="">
+            </div>
+        </div>
+        <div class="section1-promo">
+            <div class="promo-text">
+                <h3>Promo 2</h3>
+                <h5>Mostro</h5>
+                <p>1/4 de Pollo + papas + ensalada + chaufa</p>
+                <a href="https://wa.me/51999999999?text=Hola,%20quiero%20información%20sobre%20la%20promo%20de%201/4,%20papas,%20ensalada%20y%20chaufa" target="_blank" class="boton-ordenar">¡Ordena ya!</a>
+            </div>
+            <div class="promo-image">
+                <img src="media/mostro.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <span class="section1-span"><b>¡Las promociones cambian cada semana, así que no dudes en visitarnos para descubrir nuevas ofertas y promociones!</b></span>
+</div>
+
+<!----------------------------------------------->
+
+<!---------- SECTION 2 (Sobre Nosotros 1) ------------>
+
+<div class="section2">
+    <div class="section2-all">
+        <div class="section2-content">
+            <h2>Los pollos con el verdadero sabor peruano</h2>
+            
+            <h6>Más que una pollería, somos parte de los mejores momentos de nuestros clientes. En Pollería Merys, nos enorgullece llevar a cada mesa el auténtico sabor peruano, preparado con ingredientes de calidad y una receta que ha conquistado a numerosas familias a lo largo de los años. Nuestra trayectoria es el reflejo del compromiso, la dedicación y la confianza que nuestros clientes depositan en nosotros día tras día.</h6>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------->
+
+<!---------- SECTION 3 (Menu) ------------>
+
+<div class="section3" id="menu"> 
+    <div class="section-titulo">
+        <h2>Menu:</h2>
+    </div>
+    <div class="section3-content">
+        <div class="section3-line">
+            <div class="section3-cuadrado">
+                <a href="#promociones"><div data-target="promociones" class="section3-image"><img src="media/promos1.jpg"></div></a>
+                <div class="section3-text">
+                    <h4>Promociones</h4>
+                </div>
+            </div>
+            <div class="section3-cuadrado">
+                <div id="section3-A" class="section3-image"><img src="media/pollo2.jpg" alt=""></div>
+                <div class="section3-text">
+                    <h4>Pollos a la Brasa</h4>
+                </div>
+            </div>
+            <div class="section3-cuadrado">
+                <div id="section3-B" class="section3-image"><img src="media/salchipapa.jpg" alt=""></div>
+                <div class="section3-text">
+                    <h4>Salchipapas</h4>
+                </div>
+            </div>
+        </div>
+        <div class="section3-line">
+            <div class="section3-cuadrado">
+                <div id="section3-C" class="section3-image"><img src="media/lomosaltado.jpg" alt=""></div>
+                <div class="section3-text">
+                    <h4>Platos a la Carta</h4>
+                </div>
+            </div>
+            <div class="section3-cuadrado">
+                <div id="section3-D" class="section3-image"><img src="media/bebidas1.jpg" alt=""></div>
+                <div class="section3-text">
+                    <h4>Bebidas</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="boton1" href="media/carta.png" target="_blank">Ver carta completa</a>
+</div>
+
+<!---------------------------------------->
+
+<!---------- SECTION 4 (Popular) ------------>
+
+<div class="section4">
+    <div class="section-titulo2">
+        <h1>Lo más popular del momento</h>
+    </div>
+    <div class="section4-all">
+        <div class="section4-content">
+            <div class="section-titulo">
+                <h2>Pollos a la Brasa:</h2>
+            </div>
+            <div class="section4-line">
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/mostrito.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Mini Mery</h6>
+                                <p>1/8 de pollo + papas + chaufa + ensalada</p>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 13</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/cuarto.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>1/4 de Pollo</h6>
+                                <p>1/4 de pollo + papas + ensalada</p>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 20</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/pollo2.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>1 Pollo Entero</h6>
+                                <p>1 pollo + papas + ensalada</p>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 35</h6>
+                            </div>
+                        </div>
+                </div>
+            </div>                     
+        </div>
+
+        <div class="section4-content">
+            <div class="section-titulo">
+                <h2>Salchipapas:</h2>
+            </div>
+            <div class="section4-line">
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/salchipapa.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Salchipapa Grande</h6>
+                                <p>Papas + Hotdog</p>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 17</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/salchipapaespecial.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Salchipapa Especial</h6>
+                                <p>Papas + Hotdog + Huevo</p>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 18</h6>
+                            </div>
+                        </div>
+                </div>        
+            </div>
+        </div>
+
+        <div class="section4-content">
+            <div class="section-titulo">
+                <h2>Platos a la Carta:</h2>
+            </div>
+            <div class="section4-line">
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/cubana.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Arroz a la Cubana</h6>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 10</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/chaufa.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Arroz Chaufa de Pollo</h6>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 16</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image"><img src="media/lomosaltado.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Lomo Saltado</h6>
+                            </div>
+                            <div class="section4-text2">
+                                <h6>S/ 22</h6>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bebidas" class="section4-content">
+            <div class="section-titulo">
+                <h2>Bebidas:</h2>
+            </div>
+            <div class="section4-line">
+                <div class="section4-cuadrado">
+                    <div class="section4-image2"><img src="media/bebidaspopular1.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Inka Cola 600ml</h6>
+                            </div>
+                            <div class="section4-text3">
+                                <h6>S/ 4.50</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image2"><img src="media/bebidaspopular2.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Inka Cola 1.5L</h6>
+                            </div>
+                            <div class="section4-text3">
+                                <h6>S/ 9</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image2"><img src="media/bebidaspopular3.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Coca Cola 600ml</h6>
+                            </div>
+                            <div class="section4-text3">
+                                <h6>S/ 4.50</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image2"><img src="media/bebidaspopular4.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Coca Cola 1.5L</h6>
+                            </div>
+                            <div class="section4-text3">
+                                <h6>S/ 9</h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="section4-cuadrado">
+                    <div class="section4-image2"><img src="media/bebidaspopular5.jpg" alt=""></div>
+                        <div class="section4-textos">
+                            <div class="section4-text1">
+                                <h6>Agua San Luis</h6>
+                            </div>
+                            <div class="section4-text3">
+                                <h6>S/ 2.50</h6>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------------------------------->
+
+<!---------- SECTION 5 (Sobre Nosotros 2) ------------>
+
+<div class="section5">
+    <div class="section-titulo">
+        <h2>Sobre nosotros:</h2>
+    </div>
+    <div class="section5-content">
+        <div class="section5-text">
+            <h2>Polleria Merys</h2>
+            <p>Desde nuestros inicios, en Pollería Merys hemos tenido un solo objetivo: llevar a cada mesa el mejor sabor peruano. A lo largo de los años, hemos crecido gracias a la confianza de nuestros clientes, quienes nos acompañan y nos siguen eligiendo generación tras generación. Hoy, mantenemos la misma pasión y dedicación del primer día, ofreciendo un delicioso pollo a la brasa, una atención cercana y ese toque especial que nos hace sentir como en casa.</p>
+        </div>
+        <div class="section5-image">
+            <div class="image-gen"><img src="media/polleria.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------->
+
+<div class="lineaseparadora"></div>
+
+<!---------- SECTION 6 (Contacto) ------------>
+    
+<div class="section6" id="contacto">
+    <div class="section-titulo">
+        <h2>Contáctanos:</h2>
+    </div>
+    <div class="section6-content">
+        <div class="section6-mapa" id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.7290253807455!2d-77.08387613296507!3d-12.062155967013464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c93f7c0a100d%3A0x5b26b37ab8d76239!2sMery%20los%20Verdaderos%20Pollos%20a%20la%20Brasa!5e0!3m2!1ses!2spe!4v1763835801723!5m2!1ses!2spe"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="section6-text">
+            <div class="section6-title">
+                <h3>Encuéntranos en:</h3>
+            </div>
+            <div class="section6-text-info">
+                <p><i class="fa-solid fa-location-dot fa-sm" style="color: rgb(193, 45, 45);"></i> <b>Dirección:</b> Av. Universitaria 2101, San Miguel 15088</p>
+                <p><i class="fa-solid fa-phone fa-sm" style="color: rgb(18, 34, 96);"></i> <b>Teléfono:</b> 999999999 / 999999999 (WhatsApp)</p>
+                <p><i class="fa-solid fa-motorcycle fa-sm" style="color: rgb(147, 154, 176);"></i> <b>Delivery:</b> Disponible solo cerca del local</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------------------------------->       
+
+<!---------- SECTION 7 (Redes) ------------>
+
+<div class="section7">
+        <div class="contact-2-all">
+            <div class="contact-2-line1">
+                <div class="contact-2-IG">
+                    <div class="contact-2-column1">
+                        <h3>Instagram</h3>
+                        <p class="arroba">@polleriamery.pe</p>
+                    </div>
+                    <div class="contact-2-column2">
+                        <h6>¡Síguenos!</h6>
+                        <p>Para saber de promociones y días especiales</p>
+                        <a class="button-main" href="https://www.instagram.com/polleriamery.pe/" target="_blank">Ir ahora</a>  
+                    </div>
+                </div>
+                <div class="contact-2-TT">
+                    <div class="contact-2-column1">
+                        <h3>TikTok</h3>
+                        <p class="arroba">@polleriamery.pe</p>
+                    </div>
+                    <div class="contact-2-column2">
+                        <h6>¡Síguenos!</h6>
+                        <p>Para saber de promociones y días especiales</p>
+                        <a class="button-main" href="https://www.tiktok.com/@polleriamery.pe" target="_blank">Ir ahora</a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-2-all-2">
+            <div class="contact-2-line2">
+                <div class="contact-2-FB">
+                    <div class="contact-2-column1">
+                        <h3>Facebook</h3>
+                        <p class="arroba">@polleriamery.pe</p>
+                    </div>
+                    <div class="contact-2-column2">
+                        <h6>¡Síguenos!</h6>
+                        <p>Para saber de promociones y días especiales</p>
+                        <a class="button-main" href="https://www.facebook.com/profile.php?id=61551251606192" target="_blank">Ir ahora</a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-------------------------------------------->
+
+<!-- OVERLAY MENU -->
+
+<!-- OVERLAY 1 -->
+
+<div class="overlay" id="overlay">
+    <div class="card card-1">
+        <div class="card-left">
+            <img src="media/pollos.jpg" alt="">
+        </div>
+        <div class="card-right">
+            <div class="card-right-title">
+                <h4>Pollos a la Brasa</h4>
+            </div>
+            <div class="card-right-content">
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>1/8 de Pollo</h6>
+                    <p>1/8 de pollo + papas + ensalada</p>
+                </div>
+                <div class="section4-text2">
+                     <h6>S/ 13</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>1/4 de Pollo</h6>
+                    <p>1/4 de pollo + papas + ensalada</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 20</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>1/2 de Pollo</h6>
+                    <p>1/2 de pollo + papas + ensalada</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 35</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>1 Pollo</h6>
+                    <p>1 pollo + papas + ensalada</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 60</h6>
+                </div>
+             </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Mini Mery</h6>
+                    <p>1/8 de pollo + papas + chaufa + ensalada</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 15</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Mery Chaufa</h6>
+                    <p>1/4 de pollo + papas + chaufa + ensalada</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 23</h6>
+                </div>
+            </div>
+            </div>
+            <a href="" class="boton-ordenar">¡Ordena ya!</a>
+        </div>
+    </div>
+</div>
+
+<!-- OVERLAY 2 -->
+
+<div class="overlay" id="overlay2">
+    <div class="card">
+        <div class="card-left">
+            <img src="media/salchipapas.jpg" alt="">
+        </div>
+        <div class="card-right">
+            <div class="card-right-title">
+                <h4>Salchipapas</h4>
+            </div>
+            <div class="card-right-content">
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Salchipapa Chica</h6>
+                    <p>Papas + Hotdog</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 12</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Salchipapa Grande</h6>
+                    <p>Papas + Hotdog</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 17</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Salchipapa Especial</h6>
+                    <p>Papas + Hotdog + Huevo</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 18</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Salchipapa a lo Pobre</h6>
+                    <p>Papas + Hotdog + Huevo + Platano Frito</p>
+                </div>
+                 <div class="section4-text2">
+                    <h6>S/ 20</h6>
+                </div>
+            </div> 
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Salchipapa Merys</h6>
+                    <p>Papas + Hotdog + Huevo + Chorizo</p>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 22</h6>
+                </div>
+            </div>
+            
+            </div>
+            <a href="" class="boton-ordenar">¡Ordena ya!</a>
+        </div>
+    </div>
+</div>
+
+<!-- OVERLAY 3 -->
+
+<div class="overlay" id="overlay3">
+    <div class="card">
+        <div class="card-left">
+            <img src="media/platoscarta.jpg" alt="">
+        </div>
+        <div class="card-right">
+            <div class="card-right-title">
+                <h4>Platos a la Carta</h4>
+            </div>
+            <div class="card-right-content">
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Arroz a la Cubana</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 10</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Arroz Chaufa de Pollo</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 16</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Arroz Chaufa de Carne</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 17</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Pollo Saltado</h6>
+                </div>
+                 <div class="section4-text2">
+                    <h6>S/ 20</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Lomo Saltado</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 22</h6>
+                </div>
+             </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Pollo a la Plancha</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 20</h6>
+                </div>
+            </div>
+            </div>
+            <a href="" class="boton-ordenar">¡Ordena ya!</a>
+        </div>
+    </div>
+</div>
+
+<!-- OVERLAY 4 -->
+
+<div class="overlay" id="overlay4">
+    <div class="card">
+        <div class="card-left">
+            <img src="media/bebidas.jpg" alt="">
+        </div>
+        <div class="card-right">
+            <div class="card-right-title">
+                <h4>Bebidas</h4>
+            </div>
+            <div class="card-right-content">
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Inka Cola / Coca Cola 600ml</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 4.50</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Inka Cola Gordita</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 6</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Inka Cola / Coca Cola 1L</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 7</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Inka Cola / Coca Cola 1.5L</h6>
+                </div>
+                 <div class="section4-text2">
+                    <h6>S/ 9</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Inka Cola / Coca Cola 2.25L</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 12</h6>
+                </div>
+             </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Agua San Luis</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 2.50</h6>
+                </div>
+            </div>
+            <div class="section4-textos">
+                <div class="section4-text1">
+                    <h6>Fanta</h6>
+                </div>
+                <div class="section4-text2">
+                    <h6>S/ 4</h6>
+                </div>
+            </div>
+            </div>
+            <a href="" class="boton-ordenar">¡Ordena ya!</a>
+        </div>
+    </div>
+</div>
+
+<!---------- BOTON WHATSAPP ------------->
+
+<a href="https://wa.me/51999999999" target="_blank"><div class="whatsapp-float" id="whatsappFloat">
+    <i class="fa-brands fa-whatsapp"></i>
+</div></a>
+
+<!-------------------------------->
+
+<!---------- SECTION 8 (Footer) ------------>
+
+<div class="footer">
+	<div class="footer-columns">
+		<div class="footer-col2">
+			<img src="media/logo.png" class="logo">
+		</div>
+		<div class="footer-col1">
+			<h6>Empresa</h6>
+			<a href="index.html" class="links_bottom">Inicio</a>
+			<a href="#menu" class="links_bottom">Menu</a>
+			<a href="#promociones" class="links_bottom">Promos</a>
+			<a href="#contacto" class="links_bottom">Contacto</a>
+		</div>
+		<div class="footer-col1">
+			<h6>Redes Sociales</h6>
+			<a href="https://www.instagram.com/polleriamery.pe/" class="links_bottom" target="_blank">Instagram</a>
+			<a href="https://www.tiktok.com/@polleriamery.pe" class="links_bottom" target="_blank">Tiktok</a>
+			<a href="https://www.facebook.com/profile.php?id=61551251606192" class="links_bottom" target="_blank">Facebook</a>	
+		</div>
+		<div class="footer-col1">
+			<h6>Contacto</h6>
+			<p class="links_bottom">+1 999999999</p>
+			<p class="links_bottom">Av. Universitaria 2101, San Miguel 15088</p>
+			<p class="links_bottom"><b>© 2026 Pollería Merys. Reservados todos los derechos</b></p>
+		</div>
+	</div>
+</div>
+
+<!----------------------------------------->
+
+<script src="scripts.js"></script>
+</body>
+</html>

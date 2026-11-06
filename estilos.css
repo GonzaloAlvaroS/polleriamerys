@@ -1,0 +1,2327 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(228, 218, 203);
+}
+html, body{
+	width: 100%;
+}
+:root {
+	font-size: 18px; /* 18 píxeles = 1rem */
+}
+h1{
+	font-size: 3rem;
+	font-family: fuenteH1H2H6;
+}
+h2{
+	font-size: 2.3rem;
+	font-family: fuenteH1H2H6;
+}
+h3{
+	font-size: 1.8rem;
+	font-family: fuenteH3H4;
+}
+h4{
+	font-size: 1.6rem; 
+	font-family: fuenteH3H4;
+}
+h5{
+	font-size: 1.4rem;
+	font-family: fuenteH5;
+}
+h6{
+	font-size: 1.2rem;
+	font-family: fuenteH1H2H6;
+}
+p, a{
+	font-size: 1rem;
+	font-family: fuenteTexto;
+}
+@font-face {
+	font-family: fuenteTexto;
+	src: url(fonts/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: fuenteH1H2H6;
+	src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: fuenteH3H4;
+	src: url(fonts/Poppins-Regular.ttf);
+}
+@font-face {
+	font-family: fuenteH5;
+	src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+
+.anuncio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anuncio-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(220, 156, 44);
+    padding: 8px;
+}
+
+.anuncio-content p{
+    color: white;
+    font-weight: 500;
+}
+
+/* -----NAVBAR----- */
+
+.navbar{
+    width: 100%;
+    height: 13vh;
+    padding: 0 60px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-links{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 70px;
+}
+.nav-link{
+    transition: 0.3s;
+}
+.nav-link:hover{
+    color: rgb(220, 179, 44);
+    transition: 0.3s;
+}
+.nav-direction{
+    color: rgb(220, 179, 44) !important;
+}
+.nav-direction:hover{
+    text-decoration: underline;
+}
+.icono-link{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgb(37, 211, 102);
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.nav-logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.navbar-links a{
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+.boton1{
+    padding: 15px 19px;
+    text-decoration: none;
+    background-color: rgb(220, 179, 44);
+    color: black;
+    font-weight: 600;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: 1s;
+}
+.boton1:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+.menu-toggle{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Responsivo para Celulares */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .navbar{
+        height: 80px;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .nav-logo{
+        width: auto;
+    }
+
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+
+    .menu-toggle{
+        display: block;
+        padding: 5px;
+        z-index: 1002;
+    }
+
+    .navbar-links{
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 25px 0;
+        box-sizing: border-box;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        background-color: rgb(22, 22, 22);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    .navbar-links.active{
+    display: flex;
+}
+
+    .nav-link{
+        font-size: 15px;
+    }
+
+    .nav-direction{
+        width: 85%;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .navbar{
+        height: 90px;
+        padding: 0 35px;
+        justify-content: space-between;
+    }
+
+    .nav-logo{
+        width: auto;
+    }
+
+    .logo{
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu-toggle{
+        display: block;
+        padding: 5px;
+        font-size: 30px;
+        z-index: 1002;
+    }
+
+    .navbar-links{
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+
+        background-color: rgb(22, 22, 22);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    .navbar-links.active{
+    display: flex;
+}
+
+    .nav-link{
+        font-size: 17px;
+    }
+
+    .nav-direction{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1919px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1919px){
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .navbar-links{
+        display: flex;
+    }
+}
+/* -----HERO----- */
+
+.hero{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 850;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(media/hero-A.png) center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media (min-width: 320px) and (max-width: 499px){
+    .hero{
+        height: 35vh;
+    }
+}
+
+
+/* -----SECTION 1----- */
+
+.section1{
+    width: 100%;
+    padding: 70px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.section1-start{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section1-content{  
+    width: 100%;   
+    height: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 20px; 
+}
+.section1-promo{ 
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden; 
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+}
+.section1-promo:hover{
+    transform: scale(1.02);
+    transition: 1s;
+}
+.promo-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(22, 22, 22);
+    gap: 10px;
+}
+.promo-text{
+    color: white;
+}
+.promo-text h3{
+    color: rgb(220, 179, 44);
+}
+.promo-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.promo-image img{
+     width: 100%;
+     height: 100%;
+}
+.boton-ordenar{
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: rgb(220, 179, 44);
+    color: black;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.section-titulo{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.section1-span{
+    font-family: fuenteTexto;
+    opacity: 0.7;
+}
+
+.contador {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tiempo {
+    width: 85px;
+    height: 85px;
+    background: rgb(22, 22, 22);
+    color: rgb(220, 179, 44);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.tiempo span {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.tiempo p {
+    margin-top: 5px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+ /* =========================================
+    📱 CELULAR — 320px a 499px
+    ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .section1{
+        padding: 45px 15px;
+        gap: 15px;
+    }
+
+    /* TÍTULO + CONTADOR */
+
+    .section1-start{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-titulo{
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-titulo h2{
+        font-size: 1.7rem;
+        margin: 0;
+    }
+
+    .contador{
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .tiempo{
+        width: 65px;
+        height: 65px;
+        border-radius: 12px;
+    }
+
+    .tiempo span{
+        font-size: 1.6rem;
+    }
+
+    .tiempo p{
+        margin-top: 3px;
+        font-size: 0.5rem;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* PROMOCIONES */
+
+    .section1-content{
+        width: 100%;
+        padding: 10px 0;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .section1-promo{
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .promo-text{
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .promo-text h3{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    .promo-text h5{
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .promo-text p{
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .boton-ordenar{
+        padding: 9px 14px;
+        font-size: 0.9rem;
+    }
+
+    .promo-image{
+        width: 100%;
+        height: 250px;
+    }
+
+    .promo-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* TEXTO INFERIOR */
+
+    .section1-span{
+        width: 95%;
+        text-align: center;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .section1{
+        padding: 60px 30px;
+        gap: 20px;
+    }
+
+    /* TÍTULO + CONTADOR */
+
+    .section1-start{
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .section-titulo{
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-titulo h2{
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .contador{
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .tiempo{
+        width: 75px;
+        height: 75px;
+    }
+
+    .tiempo span{
+        font-size: 2rem;
+    }
+
+
+    /* PROMOCIONES */
+
+    .section1-content{
+        width: 100%;
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .section1-promo{
+        width: 100%;
+        height: 300px;
+    }
+
+    .promo-text{
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .promo-image{
+        width: 50%;
+    }
+
+    .promo-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .promo-text h3{
+        font-size: 1.5rem;
+    }
+
+    .promo-text h5{
+        font-size: 1.1rem;
+    }
+
+    .promo-text p{
+        font-size: 0.95rem;
+    }
+
+
+    /* TEXTO INFERIOR */
+
+    .section1-span{
+        width: 90%;
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1919px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1919px){
+
+    .section1{
+        padding: 60px 40px;
+    }
+
+    .section1-content{
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .section1-promo{
+        height: 35vh;
+    }
+
+    .promo-image img{
+        object-fit: cover;
+    }
+
+    .contador{
+        gap: 15px;
+    }
+
+    .tiempo{
+        width: 80px;
+        height: 80px;
+    }
+
+}
+
+/* -----SECTION 2----- */
+
+.section2-all{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.7),rgba(22, 22, 22, 0.7)), url(media/pollo.jpg) center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.section2-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+}
+.section2-content h2{
+    color: rgb(220, 179, 44);
+}
+.section2-content h6{
+    width: 75%;
+    text-align: center;
+}
+ /* =========================================
+    📱 CELULAR — 320px a 499px
+    ========================================= */
+
+/* CELULAR — 320px a 499px */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .section2-all{
+        height: auto;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .section2-content{
+        padding: 0;
+        gap: 15px;
+    }
+
+    .section2-content h2{
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .section2-content h6{
+        width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0;
+    }
+
+}
+
+/* TABLETS — 500px a 1023px */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .section2-all{
+        height: 55vh;
+    }
+
+    .section2-content{
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+    .section2-content h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .section2-content h6{
+        width: 90%;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* DESKTOP — 1024px a 1919px */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .section2-content h2{
+        font-size: 2.2rem;
+    }
+
+    .section2-content h6{
+        font-size: 1rem;
+    }
+
+}
+
+/* -----SECTION 3----- */
+
+.section3{
+    width: 100%;
+    padding: 70px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 35px;
+}
+.section3-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 30px;   
+}
+.section3-line{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.section3-image{
+    width: 400px;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border: rgb(22, 22, 22) 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.section3-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.section3-text{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.section3-cuadrado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    transition: 1s;
+}
+.section3-cuadrado:hover{
+    transform: scale(1.04);
+    transition: 1s;
+}
+.section-titulo2{
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    box-sizing: border-box;
+    color: rgb(220, 179, 44);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); 
+}
+.section-titulo2 h1{
+    font-size: 2.7rem;
+}
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .section3{
+        padding: 45px 15px;
+        gap: 25px;
+    }
+
+    .section3-content{
+        gap: 25px;
+    }
+
+    .section3-line{
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .section3-cuadrado{
+        width: 100%;
+    }
+
+    .section3-image{
+        width: 100%;
+        height: 230px;
+    }
+
+    .section3-text h4{
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .section3-cuadrado:hover{
+        transform: none;
+    }
+
+    .section3 .boton1{
+        font-size: 0.9rem;
+        padding: 12px 16px;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .section3{
+        padding: 60px 30px;
+        gap: 30px;
+    }
+
+    .section3-line{
+        gap: 20px;
+    }
+
+    .section3-image{
+        width: 280px;
+        height: 250px;
+    }
+
+    .section3-text h4{
+        font-size: 1.1rem;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .section3{
+        padding: 60px 40px;
+    }
+
+    .section3-image{
+        width: 330px;
+        height: 300px;
+    }
+
+    .section3-line{
+        gap: 25px;
+    }
+
+    .section3-text h4{
+        font-size: 1.1rem;
+    }
+
+}
+
+/* -----SECTION 4----- */
+
+.section4{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgb(22, 22, 22);
+}
+.section4 h2{
+    color: white;
+}
+.section4-all{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+}
+.section4-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;   
+}
+.section4-line{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.section4-cuadrado{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.section4-image{
+    width: 350px;
+    height: 28vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: rgb(220, 179, 44) solid 1px;
+    border-radius: 10px;
+}
+.section4-image img, .section4-image2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.section4-image2{
+    width: 220px;
+    height: 26vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: rgb(220, 179, 44) solid 1px;
+    border-radius: 10px;
+}
+.section4-textos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.section4-textos p{
+    font-size: 0.8rem;
+}
+#bebidas h6{
+    font-size: 0.9rem;
+}
+.section4-text1{
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.section4-text2 {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.section4-text3 {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .section4{
+        padding: 45px 15px;
+    }
+
+    .section4-all{
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .section4-content{
+        gap: 20px;
+    }
+
+    .section4-line{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .section4-cuadrado{
+        width: 100%;
+        gap: 10px;
+    }
+
+    .section4-image{
+        width: 100%;
+        height: 230px;
+    }
+
+    .section4-image2{
+        width: 180px;
+        height: 220px;
+    }
+
+    .section4-textos{
+        width: 100%;
+    }
+
+    .section4-text1{
+        width: 75%;
+    }
+
+    .section4-text2{
+        width: 25%;
+    }
+
+    .section4-text3{
+        width: 30%;
+    }
+
+    .section4-textos h6{
+        font-size: 0.95rem;
+    }
+
+    .section4-textos p{
+        font-size: 0.75rem;
+    }
+
+    #bebidas h6{
+        font-size: 0.85rem;
+    }
+   .section-titulo2 h1{
+    font-size: 2.2rem;
+   }
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .section4{
+        padding: 60px 30px;
+    }
+
+    .section4-all{
+        gap: 45px;
+    }
+
+    .section4-line{
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .section4-image{
+        width: 280px;
+        height: 230px;
+    }
+
+    .section4-image2{
+        width: 170px;
+        height: 220px;
+    }
+
+    .section4-textos{
+        width: 100%;
+    }
+
+    .section4-text1{
+        width: 75%;
+    }
+
+    .section4-text2{
+        width: 25%;
+    }
+
+    .section4-text3{
+        width: 30%;
+    }
+
+    .section4-textos h6{
+        font-size: 0.95rem;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .section4{
+        padding: 50px 30px;
+    }
+
+    .section4-line{
+        gap: 25px;
+    }
+
+    .section4-image{
+        width: 300px;
+        height: 250px;
+    }
+
+    .section4-image2{
+        width: 180px;
+        height: 220px;
+    }
+
+    .section4-textos h6{
+        font-size: 0.9rem;
+    }
+
+    .section4-textos p{
+        font-size: 0.75rem;
+    }
+
+}
+
+/* -----SECTION 5----- */
+
+.section5{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.section5-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;    
+}
+.section5-text{
+    width: 70%;
+    height: 35vh;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    border-radius: 20px 0 0 20px;
+    gap: 10px;
+}
+.section5-text h2{
+    color: rgb(220, 179, 44);
+}
+.section5-text p{
+    width: 95%;
+    text-align: justify;
+}
+.section5-image{
+    width: 40%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.image-gen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    
+}
+
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .section5{
+        padding: 45px 15px;
+    }
+
+    .section5-content{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section5-text{
+        width: 100%;
+        height: auto;
+        padding: 25px 20px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        gap: 10px;
+    }
+
+    .section5-text h2{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .section5-text p{
+        width: 100%;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: left;
+        margin: 0;
+    }
+
+    .section5-image{
+        width: 100%;
+        height: 250px;
+    }
+
+    .image-gen{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .section5{
+        padding: 60px 30px;
+    }
+
+    .section5-content{
+        gap: 0;
+    }
+
+    .section5-text{
+        width: 60%;
+        height: 350px;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+
+    .section5-text h2{
+        font-size: 1.7rem;
+    }
+
+    .section5-text p{
+        width: 100%;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .section5-image{
+        width: 40%;
+        height: 350px;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .section5{
+        padding: 50px 40px;
+    }
+
+    .section5-text{
+        width: 65%;
+        height: 350px;
+        padding: 25px;
+    }
+
+    .section5-text h2{
+        font-size: 1.8rem;
+    }
+
+    .section5-text p{
+        width: 95%;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .section5-image{
+        width: 35%;
+        height: 400px;
+    }
+
+}
+
+/* -----SECTION 6----- */
+
+.section6{
+    width: 100%;
+    padding: 50px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 30px;
+}
+.section6-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.section6-mapa{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section6-mapa iframe{
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.section6-text{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.section6-text-info{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.section6-text-info p{
+    font-size: 1.4rem;
+}
+.section6-text h3{
+    color: rgb(220, 179, 44);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.lineaseparadora{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    background-color: black;
+    opacity: 50%;
+    width: 92%;
+    height: 2px;
+}
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .section6{
+        padding: 45px 15px 0;
+        gap: 25px;
+    }
+
+    .section6-content{
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .section6-mapa{
+        width: 100%;
+        height: 300px;
+    }
+
+    .section6-mapa iframe{
+        width: 100%;
+        height: 300px;
+    }
+
+    .section6-text{
+        width: 100%;
+        gap: 10px;
+    }
+
+    .section6-text-info{
+        gap: 10px;
+    }
+
+    .section6-text-info p{
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .section6-text h3{
+        font-size: 1.3rem;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .section6{
+        padding: 60px 30px 0;
+    }
+
+    .section6-content{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .section6-mapa{
+        width: 100%;
+        height: 400px;
+    }
+
+    .section6-mapa iframe{
+        width: 100%;
+        height: 400px;
+    }
+
+    .section6-text{
+        width: 100%;
+    }
+
+    .section6-text-info p{
+        font-size: 1.1rem;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .section6{
+        padding: 50px 40px 0;
+    }
+
+    .section6-content{
+        gap: 25px;
+    }
+
+    .section6-mapa{
+        height: 450px;
+    }
+
+    .section6-mapa iframe{
+        height: 450px;
+    }
+
+    .section6-text-info p{
+        font-size: 1.1rem;
+    }
+
+}
+
+/* -----SECTION 7----- */
+
+.section7{
+    padding: 50px;
+}
+.contact-2-all, .contact-2-all-2{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contact-2-line1{
+	width: 80%;
+	padding: 30px;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	flex-direction: row;
+	gap: 50px;
+}
+.contact-2-line2{
+	width: 50%;
+	padding: 30px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: row;
+}
+.contact-2-IG, .contact-2-TT, .contact-2-FB{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	text-align: center;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+.contact-2-IG, .contact-2-TT{
+	width: 80%;
+	background: url(media/TTBG.jpg);
+}
+.contact-2-IG{
+	background: url(media/IGBG.jpg);
+	background-size: cover;
+}
+.contact-2-TT{
+	background: url(media/TTBG.jpg);
+	background-size: cover;
+}
+.contact-2-FB{
+	width: 76%;
+	background: url(media/FBBG.jpg);
+	background-size: cover;
+}
+.contact-2-column1{
+	width: 90%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+	text-align: center;
+}
+.contact-2-column2{
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+}
+.contact-2-line1 a, .contact-2-line2 a{	
+	background: #FFFFFF;
+	border-radius: 15px;
+	color: black;
+	font-weight: 600;
+	transition: all 0.5s ease;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.contact-2-line1 a:hover .contact-2-line2 a:hover{
+	scale: (1.1);
+	background: #FFFFFF;
+	color: black;
+}
+.contact-2-line1 h6, .contact-2-line2 h6{
+	color: #FFFFFF;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+}
+.arroba{
+	opacity: 70%;
+}
+.button-main{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+    border-radius: 10px;
+}
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .section7{
+        padding: 45px 15px;
+    }
+
+    .contact-2-line1{
+        width: 100%;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .contact-2-IG,
+    .contact-2-TT,
+    .contact-2-FB{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-2-line2{
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .contact-2-column1{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .contact-2-column2{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .contact-2-column1 h3{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    .contact-2-column1 .arroba{
+        font-size: 0.9rem;
+    }
+
+    .contact-2-column2 h6{
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .contact-2-column2 p{
+        font-size: 0.85rem;
+        margin: 0;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .section7{
+        padding: 60px 30px;
+    }
+
+    .contact-2-line1{
+        width: 100%;
+        padding: 25px 0;
+        gap: 25px;
+    }
+
+    .contact-2-IG,
+    .contact-2-TT{
+        width: 50%;
+    }
+
+    .contact-2-line2{
+        width: 70%;
+        padding: 25px 0;
+    }
+
+    .contact-2-FB{
+        width: 100%;
+    }
+
+    .contact-2-column1,
+    .contact-2-column2{
+        padding: 20px 15px;
+    }
+
+    .contact-2-column1 h3{
+        font-size: 1.5rem;
+    }
+
+    .contact-2-column2 h6{
+        font-size: 1rem;
+    }
+
+    .contact-2-column2 p{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .section7{
+        padding: 50px 30px;
+    }
+
+    .contact-2-line1{
+        width: 90%;
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .contact-2-IG,
+    .contact-2-TT{
+        width: 50%;
+    }
+
+    .contact-2-line2{
+        width: 60%;
+        padding: 25px;
+    }
+
+    .contact-2-FB{
+        width: 100%;
+    }
+
+    .contact-2-column1 h3{
+        font-size: 1.5rem;
+    }
+
+    .contact-2-column2 p{
+        font-size: 0.9rem;
+    }
+
+}
+/* ----- FOOTER ----- */
+
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 25px 0;
+    background-color: rgb(22, 22, 22);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    box-sizing: border-box; 
+}
+.footer-columns{
+    width: 100%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: row;
+	gap: 100px;
+}
+.footer-col1{
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+}
+.footer-col1 h6{
+	color: rgb(220, 179, 44);
+    font-size: 1.1rem;
+}
+.footer-col1 p{
+    color: white;
+}
+.footer-col2 img{
+	width: 150px;
+    height: 150px;
+}
+a.links_bottom:link, a.links_bottom:visited {
+	width: auto;
+	height: 100%;
+	font-family: fuenteTexto;
+	color: white;
+	font-size: 1rem;
+	text-decoration: none;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+}
+
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .footer{
+        padding: 35px 20px;
+    }
+
+    .footer-columns{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-col1{
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .footer-col1 h6{
+        font-size: 1rem;
+        margin: 0 0 5px;
+    }
+
+    .footer-col1 p{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .footer-col2 img{
+        width: 100px;
+        height: 100px;
+    }
+
+    a.links_bottom:link,
+    a.links_bottom:visited{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .footer{
+        padding: 30px 25px;
+    }
+
+    .footer-columns{
+        gap: 45px;
+        flex-wrap: wrap;
+    }
+
+    .footer-col1{
+        gap: 8px;
+    }
+
+    .footer-col1 h6{
+        font-size: 1rem;
+    }
+
+    .footer-col1 p{
+        font-size: 0.85rem;
+    }
+
+    .footer-col2 img{
+        width: 120px;
+        height: 120px;
+    }
+
+    a.links_bottom:link,
+    a.links_bottom:visited{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .footer-columns{
+        gap: 60px;
+    }
+
+    .footer-col1 h6{
+        font-size: 1rem;
+    }
+
+    .footer-col1 p{
+        font-size: 0.9rem;
+    }
+
+    .footer-col2 img{
+        width: 130px;
+        height: 130px;
+    }
+
+}
+
+/* -----TARJETAS MENU----- */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, background .3s ease;
+    z-index: 999;
+}
+.overlay.active {
+    opacity: 1;
+    background: rgba(0,0,0,0.6);
+    pointer-events: all;
+}
+.card {
+    background: rgb(22, 22, 22);
+    width: 60%;
+    height: 450px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    transform: scale(0.85) translateY(20px); 
+    opacity: 0;
+    transition: transform .3s ease, opacity .3s ease;
+    color: white;
+}
+.card-1{
+    height: 520px !important;
+}
+.card h4{
+    color: rgb(220, 179, 44);
+}
+.card p{
+    color: rgb(196, 196, 196);
+}
+.card-left{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.card-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-right{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px; 
+}
+.card-right-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.overlay.active .card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .card{
+        width: 90%;
+        height: 85vh;
+        flex-direction: column;
+    }
+
+    .card-1{
+        height: 85vh !important;
+    }
+
+    .card-left{
+        width: 100%;
+        height: 35%;
+        min-height: 150px;
+    }
+
+    .card-right{
+        width: 100%;
+        height: 65%;
+        padding: 15px;
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    .card-right-title h4{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .card-right-content{
+        gap: 6px;
+        overflow-y: auto;
+    }
+
+    .section4-textos{
+        gap: 5px;
+    }
+
+    .section4-text1 h6,
+    .section4-text2 h6{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .section4-text1 p{
+        font-size: 0.65rem;
+        margin: 3px 0 0;
+    }
+
+    .card-right .boton-ordenar{
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .card{
+        width: 85%;
+        height: 520px;
+    }
+
+    .card-1{
+        height: 520px !important;
+    }
+
+    .card-left{
+        width: 45%;
+    }
+
+    .card-right{
+        width: 55%;
+        padding: 20px;
+    }
+
+    .card-right-title h4{
+        font-size: 1.3rem;
+    }
+
+    .card-right-content{
+        gap: 7px;
+    }
+
+    .section4-text1 h6,
+    .section4-text2 h6{
+        font-size: 0.85rem;
+    }
+
+    .section4-text1 p{
+        font-size: 0.7rem;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .card{
+        width: 70%;
+        height: 520px;
+    }
+
+    .card-1{
+        height: 520px !important;
+    }
+
+    .card-left{
+        width: 50%;
+    }
+
+    .card-right{
+        width: 50%;
+        padding: 20px;
+    }
+
+    .card-right-title h4{
+        font-size: 1.4rem;
+    }
+
+    .section4-text1 h6,
+    .section4-text2 h6{
+        font-size: 0.9rem;
+    }
+
+    .section4-text1 p{
+        font-size: 0.75rem;
+    }
+
+}
+
+/* ---------- Boton Whatsapp ---------- */
+
+.whatsapp-float{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    transition: .3s;
+}
+.whatsapp-float:hover{
+    transform: scale(1.08);
+}
+.whatsapp-float i{
+    color: white;
+    font-size: 42px;
+}
+
+/* =========================================
+   📱 CELULAR — 320px a 499px
+   ========================================= */
+
+@media (min-width: 320px) and (max-width: 499px){
+
+    .whatsapp-float{
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .whatsapp-float i{
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================================
+   📱 TABLET — 500px a 1023px
+   ========================================= */
+
+@media (min-width: 500px) and (max-width: 1023px){
+
+    .whatsapp-float{
+        width: 70px;
+        height: 70px;
+        bottom: 25px;
+        right: 20px;
+    }
+
+    .whatsapp-float i{
+        font-size: 36px;
+    }
+
+}
+
+
+/* =========================================
+   💻 DESKTOP — 1024px a 1535px
+   ========================================= */
+
+@media (min-width: 1024px) and (max-width: 1535px){
+
+    .whatsapp-float{
+        width: 75px;
+        height: 75px;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .whatsapp-float i{
+        font-size: 40px;
+    }
+
+}
+
+/* --------------------------------------- */
